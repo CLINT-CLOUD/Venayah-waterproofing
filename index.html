@@ -1,0 +1,751 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Venyah Waterproofing Solutions</title>
+  <meta name="description" content="Venyah Waterproofing Solutions — certified waterproofing for basements, roofing, terraces and wet areas. Nairobi, Kenya." />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<!-- ════════════════════════════════════════════════
+     NAVBAR
+     HOW TO ADD YOUR LOGO:
+     1. Create an  images /  folder next to index.html
+     2. Save your logo as  images/logo.png
+     3. In .logo-mark below, uncomment the <img> line
+        and delete the .logo-mark-inner div
+════════════════════════════════════════════════ -->
+<nav id="navbar">
+  <a href="#hero" class="nav-brand">
+    <div class="logo-mark">
+      <!--  LOGO IMAGE — uncomment when ready:
+      <img src="images/logo.png" alt="Venyah Logo" />
+      -->
+      <div class="logo-mark-inner">VW</div>
+    </div>
+    <div class="logo-text-wrap">
+      <div class="logo-company">Venayah <span>WS</span></div>
+      <div class="logo-sub">Waterproofing Solutions</div>
+    </div>
+  </a>
+
+  <ul class="nav-links">
+    <li><a href="#hero">Home</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#services">Services</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#process">Process</a></li>
+    <li><a href="#testimonials">Reviews</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+
+  <div style="display:flex;gap:.9rem;align-items:center;">
+    <button class="btn-primary" id="nav-quote" style="display:none;padding:.65rem 1.5rem;font-size:.78rem;" onclick="goTo('#contact')">Free Quote</button>
+    <button class="hamburger" id="ham" aria-label="Menu"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+
+<div class="mobile-menu" id="mob-menu">
+  <a href="#hero"         onclick="closeMob()">Home</a>
+  <a href="#projects"     onclick="closeMob()">Projects</a>
+  <a href="#services"     onclick="closeMob()">Services</a>
+  <a href="#about"        onclick="closeMob()">About</a>
+  <a href="#process"      onclick="closeMob()">Process</a>
+  <a href="#testimonials" onclick="closeMob()">Reviews</a>
+  <a href="#contact"      onclick="closeMob()">Contact</a>
+  <button class="btn-primary" style="margin-top:.5rem;width:100%;justify-content:center;" onclick="goTo('#contact');closeMob()">Get Free Quote</button>
+</div>
+
+
+<!-- ════════════════════════════════════════════════
+     HERO SECTION
+     PHOTOS TO ADD:
+       images/hero-main.jpg   — large card (your best project photo)
+       images/hero-sub-1.jpg  — bottom left small card
+       images/hero-sub-2.jpg  — bottom right small card
+════════════════════════════════════════════════ -->
+<section id="hero">
+  <div class="hero-ring hero-ring-1"></div>
+  <div class="hero-ring hero-ring-2"></div>
+  <div class="hero-ring hero-ring-3"></div>
+  <div class="hero-dots"></div>
+  <div class="hero-accent"></div>
+
+  <div class="hero-body">
+    <!-- LEFT: Text -->
+    <div>
+      <div class="hero-badge">
+        <div class="hero-badge-dot"></div>
+        Certified Waterproofing Specialists
+      </div>
+
+      <h1>
+        Protect Every<br>
+        Surface with<br>
+        <em>Confidence</em>
+      </h1>
+
+      <p class="hero-lead">
+        Venyah Waterproofing Solutions delivers end-to-end protection for
+        basements, foundations, rooftops, and wet areas across Nairobi.
+        Built to last — backed by a written 10-year warranty.
+      </p>
+
+      <div class="hero-btns">
+        <button class="btn-primary"   onclick="goTo('#services')">Our Services ›</button>
+        <button class="btn-secondary" onclick="goTo('#contact')">Get Free Quote</button>
+      </div>
+
+      <div class="hero-trust">
+        <div class="trust-item">Certified Team</div>
+        <div class="trust-sep"></div>
+        <div class="trust-item">10-Year Warranty</div>
+        <div class="trust-sep"></div>
+        <div class="trust-item">100+ Projects</div>
+      </div>
+    </div>
+
+    <!-- RIGHT: Image collage -->
+    <div class="hero-visual">
+
+      <!-- MAIN HERO PHOTO -->
+      <div class="hero-img-card">
+        
+          
+          <img src="images/main.jpeg" alt="Waterproofing project" />
+        
+        <div class="photo-ph">
+          <div class="photo-ph-icon">🏗️</div>
+          <div class="photo-ph-label">
+            Your main project photo<br>
+            <code>images/hero-main.jpg</code>
+          </div>
+        </div>
+        <div class="hero-img-badge">
+          <div class="hib-icon">🏆</div>
+          <div>
+            <div class="hib-title">Industry Certified</div>
+            <div class="hib-sub">Fully Insured &amp; Warranted</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- TWO SUB PHOTOS -->
+      <div class="hero-sub-row">
+        <div class="hero-sub-card">
+          
+            <img src="images/warehose.jpeg" alt="Waterproofing work" />
+          <div class="photo-ph">
+            <div class="photo-ph-icon">🏠</div>
+            <div class="photo-ph-label"><code>images/hero-sub-1.jpg</code></div>
+          </div>
+        </div>
+        <div class="hero-sub-card">
+          
+            <img src="images/mbs rd.jpeg" alt="Waterproofing result" />
+          
+          <div class="photo-ph">
+            <div class="photo-ph-icon">🏢</div>
+            <div class="photo-ph-label"><code>images/hero-sub-2.jpg</code></div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Stats bar -->
+  <div class="hero-stats-bar">
+    <div class="hstat reveal"><div class="hstat-num">100+</div><div class="hstat-label">Projects Done</div></div>
+    <div class="hstat reveal"><div class="hstat-num">5+</div> <div class="hstat-label">Years Experience</div></div>
+    <div class="hstat reveal"><div class="hstat-num">98%</div> <div class="hstat-label">Satisfaction Rate</div></div>
+    <div class="hstat reveal"><div class="hstat-num">10yr</div><div class="hstat-label">Written Warranty</div></div>
+  </div>
+</section>
+
+
+<!-- ════════════════════════════════════════════════
+     PROJECTS CAROUSEL
+     PHOTOS TO ADD — create an images/ folder and add:
+       images/project-1.jpg  (Basement)
+       images/project-2.jpg  (Roof)
+       images/project-3.jpg  (Terrace)
+       images/project-4.jpg  (Pool)
+       images/project-5.jpg  (Foundation)
+       images/project-6.jpg  (Bathroom)
+
+     For each card: uncomment the <img> tag,
+     delete the .photo-ph div, done!
+════════════════════════════════════════════════ -->
+<section id="projects">
+  <div class="proj-header">
+    <div>
+      <div class="eyebrow">Our Work</div>
+      <h2 class="section-title">Featured Projects</h2>
+      <p class="section-lead">Completed waterproofing projects across residential, commercial and industrial properties in Nairobi.</p>
+    </div>
+    <div class="proj-ctrl-row">
+      <button class="ctrl-btn" id="pp" aria-label="Previous">&#8592;</button>
+      <button class="ctrl-btn" id="pn" aria-label="Next">&#8594;</button>
+    </div>
+  </div>
+
+  <div class="carousel-wrap">
+    <div class="carousel-track" id="proj-track">
+
+      <!-- PROJECT 1 -->
+      <div class="proj-card">
+        <div class="proj-photo">
+          <img src="images/main.jpeg" alt="Basement waterproofing Karen" /> 
+          <div class="photo-ph">
+           
+          </div>
+          <span class="proj-tag">Basement</span>
+        </div>
+        <div class="proj-body">
+          <div class="proj-title">Residential Basement — Karen</div>
+          <div class="proj-desc">Complete interior waterproofing for a 3-level basement including crack injection and drainage channel installation.</div>
+          <div class="proj-meta"><span>Residential</span><span>2024</span><span>3 Weeks</span></div>
+        </div>
+      </div>
+
+      <!-- PROJECT 2 -->
+      <div class="proj-card">
+        <div class="proj-photo">
+         <img src="images/flatroof.jpeg" alt="Commercial flat roof Westlands" /> 
+          <div class="photo-ph">
+            <div class="photo-ph-icon">🏢</div>
+            <div class="photo-ph-label">Project photo<br><code>images/project-2.jpg</code></div>
+          </div>
+          <span class="proj-tag">Roofing</span>
+        </div>
+        <div class="proj-body">
+          <div class="proj-title">Commercial Flat Roof — Westlands</div>
+          <div class="proj-desc">Torch-on bitumen membrane across 1,800m² commercial flat roof with full insulation boarding and drainage upgrade.</div>
+          <div class="proj-meta"><span>Commercial</span><span>2024</span><span>5 Weeks</span></div>
+        </div>
+      </div>
+
+
+      <!-- PROJECT 4 -->
+      <div class="proj-card">
+        <div class="proj-photo">
+           <img src="images/pool.jpeg" alt="Pool waterproofing Runda" /> 
+          <div class="photo-ph">
+            <div class="photo-ph-icon">🏊</div>
+            <div class="photo-ph-label">Project photo<br><code>images/project-4.jpg</code></div>
+          </div>
+          <span class="proj-tag">Wet Area</span>
+        </div>
+        <div class="proj-body">
+          <div class="proj-title">Olympic Pool — Runda</div>
+          <div class="proj-desc">Specialist cementitious system for a 25m private pool with balcony surround tanking and expansion joint treatment.</div>
+          <div class="proj-meta"><span>Residential</span><span>2023</span><span>3 Weeks</span></div>
+        </div>
+      </div>
+
+      <!-- PROJECT 5 -->
+      <div class="proj-card">
+        <div class="proj-photo">
+          <img src="images/warehose.jpeg" alt="Industrial foundation Mombasa Road" />
+          <div class="photo-ph">
+            <div class="photo-ph-icon">🏭</div>
+            <div class="photo-ph-label">Project photo<br><code>images/project-5.jpg</code></div>
+          </div>
+          <span class="proj-tag">Foundation</span>
+        </div>
+        <div class="proj-body">
+          <div class="proj-title">Industrial Foundation — Mombasa Rd</div>
+          <div class="proj-desc">Exterior foundation waterproofing for a logistics warehouse including drainage board and French drain system.</div>
+          <div class="proj-meta"><span>Industrial</span><span>2023</span><span>4 Weeks</span></div>
+        </div>
+      </div>
+
+      <!-- PROJECT 6 -->
+      <div class="proj-card">
+        <div class="proj-photo">
+          <img src="images/bathroom.jpeg" alt="Wet room suites Kileleshwa" /> 
+          <div class="photo-ph">
+            <div class="photo-ph-icon">🛁</div>
+            <div class="photo-ph-label">Project photo<br><code>images/project-6.jpg</code></div>
+          </div>
+          <span class="proj-tag">Wet Area</span>
+        </div>
+        <div class="proj-body">
+          <div class="proj-title">Luxury Wet Rooms — Kileleshwa</div>
+          <div class="proj-desc">Full bathroom and wet room tanking for 8 en-suite bathrooms in a new-build luxury apartment block.</div>
+          <div class="proj-meta"><span>Residential</span><span>2024</span><span>2 Weeks</span></div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <div class="carousel-dots" id="proj-dots"></div>
+</section>
+
+
+<!-- ════════════════════════════════════════════════
+     SERVICES
+════════════════════════════════════════════════ -->
+<section id="services">
+  <div class="svc-head reveal">
+    <div>
+      <div class="eyebrow">What We Do</div>
+      <h2 class="section-title">Our Waterproofing<br>Services</h2>
+    </div>
+    <p class="section-lead" style="max-width:380px;">
+      Complete moisture protection across every surface type — residential, commercial, and industrial.
+    </p>
+  </div>
+
+  <div class="svc-grid">
+    <div class="svc-card reveal">
+      <div class="svc-card-num">01</div>
+      <div class="svc-icon">🏗️</div>
+      <h3>Basement &amp; Foundation</h3>
+      <p>Complete below-grade waterproofing systems that prevent water ingress, protect structural integrity, and keep lower levels permanently dry.</p>
+      <ul class="svc-list">
+        <li>Interior &amp; exterior membrane systems</li>
+        <li>French drain installation</li>
+        <li>Crack injection &amp; sealing</li>
+        <li>Sump pump systems</li>
+        <li>Rising damp treatment</li>
+      </ul>
+    </div>
+
+    <div class="svc-card reveal">
+      <div class="svc-card-num">02</div>
+      <div class="svc-icon">🏛️</div>
+      <h3>Roofing &amp; Terraces</h3>
+      <p>High-performance membranes for flat roofs, terraces, and podium decks designed for extreme weather and prolonged UV exposure.</p>
+      <ul class="svc-list">
+        <li>Liquid applied membranes</li>
+        <li>Torch-on bitumen systems</li>
+        <li>Green roof waterproofing</li>
+        <li>Terrace deck coatings</li>
+        <li>Parapet wall treatment</li>
+      </ul>
+    </div>
+
+    <div class="svc-card reveal">
+      <div class="svc-card-num">03</div>
+      <div class="svc-icon">🚿</div>
+      <h3>Bathrooms &amp; Wet Areas</h3>
+      <p>Precision waterproofing for bathrooms, wet rooms, and all internal wet zones — lasting protection behind every tile and finish.</p>
+      <ul class="svc-list">
+        <li>Shower &amp; wet room tanking</li>
+        <li>Pool &amp; spa waterproofing</li>
+        <li>Balcony &amp; planter box sealing</li>
+        <li>Screed &amp; tile bed preparation</li>
+        <li>Cementitious systems</li>
+      </ul>
+    </div>
+
+    <div class="svc-card reveal">
+      <div class="svc-card-num">04</div>
+      <div class="svc-icon">🔍</div>
+      <h3>Inspection &amp; Assessment</h3>
+      <p>Thorough waterproofing surveys and condition assessments to diagnose failures and recommend the most effective remediation.</p>
+      <ul class="svc-list">
+        <li>Moisture meter surveys</li>
+        <li>Thermal imaging inspection</li>
+        <li>Detailed written reports</li>
+        <li>Remediation planning</li>
+        <li>Expert witness reporting</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="svc-cta-strip reveal">
+    <p><strong>Not sure which service you need?</strong> Our certified team will visit your property and recommend the right solution at no cost.</p>
+    <button class="btn-primary" onclick="goTo('#contact')">Book Free Assessment ›</button>
+  </div>
+</section>
+
+
+<!-- ════════════════════════════════════════════════
+     ABOUT
+     PHOTOS TO ADD:
+       images/about-tall.jpg    — tall left photo (team on site)
+       images/about-top.jpg     — top right photo
+       images/about-bottom.jpg  — bottom right photo
+════════════════════════════════════════════════ -->
+<section id="about">
+  <div class="about-grid">
+
+    <!-- Photo mosaic -->
+    <div class="about-mosaic reveal">
+      <div class="mosaic-grid">
+
+        <!-- TALL LEFT PHOTO -->
+        <div class="mosaic-cell">
+          <img src="images/pool.jpeg" alt="Venyah team on site" /> 
+          <div class="photo-ph">
+            <div class="photo-ph-icon">👷</div>
+            <div class="photo-ph-label">Team photo<br><code>images/about-tall.jpg</code></div>
+          </div>
+        </div>
+
+        <!-- TOP RIGHT PHOTO -->
+        <div class="mosaic-cell">
+          <img src="images/completed1.jpeg" alt="Waterproofing membrane application" />
+          <div class="photo-ph">
+            <div class="photo-ph-icon">🔧</div>
+            <div class="photo-ph-label">Work photo<br><code>images/about-top.jpg</code></div>
+          </div>
+        </div>
+
+        <!-- BOTTOM RIGHT PHOTO -->
+        <div class="mosaic-cell">
+          <img src="images/comp2.jpeg" alt="Completed waterproofing project" /> 
+          <div class="photo-ph">
+            <div class="photo-ph-icon">✅</div>
+            <div class="photo-ph-label">Result photo<br><code>images/about-bottom.jpg</code></div>
+          </div>
+        </div>
+
+      </div>
+      <div class="about-exp-badge">
+        <div class="big">15+</div>
+        <div class="sm">Years of Trust</div>
+      </div>
+    </div>
+
+    <!-- Text content -->
+    <div class="reveal">
+      <div class="eyebrow">Why Choose Venyah</div>
+      <h2 class="section-title">Built on Expertise.<br>Delivered with Care.</h2>
+      <p class="section-lead">
+        We combine cutting-edge waterproofing technology with over 15 years of hands-on
+        expertise to deliver solutions that truly stand the test of time and weather.
+      </p>
+      <div class="about-feats">
+        <div class="about-feat">
+          <div class="af-icon">🏅</div>
+          <div>
+            <div class="af-title">Certified &amp; Fully Insured</div>
+            <p class="af-desc">Every team member holds current industry certifications. All projects are fully insured for your complete peace of mind.</p>
+          </div>
+        </div>
+        <div class="about-feat">
+          <div class="af-icon">⭐</div>
+          <div>
+            <div class="af-title">Premium Materials Only</div>
+            <p class="af-desc">We install only best-in-class products from globally recognised manufacturers with proven long-term performance records.</p>
+          </div>
+        </div>
+        <div class="about-feat">
+          <div class="af-icon">📄</div>
+          <div>
+            <div class="af-title">Written 10-Year Warranty</div>
+            <p class="af-desc">Every completed system comes with a comprehensive written warranty certificate — your long-term protection, guaranteed.</p>
+          </div>
+        </div>
+        <div class="about-feat">
+          <div class="af-icon">🔕</div>
+          <div>
+            <div class="af-title">Minimal Disruption</div>
+            <p class="af-desc">We plan and execute all work to keep your home or business fully operational throughout the entire project.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ════════════════════════════════════════════════
+     PROCESS
+════════════════════════════════════════════════ -->
+<section id="process">
+  <div class="process-hd reveal">
+    <div class="eyebrow">How It Works</div>
+    <h2 class="section-title">Our 4-Step Process</h2>
+    <p class="section-lead">From first contact to final certificate — seamless and professional every step of the way.</p>
+  </div>
+  <div class="steps-grid">
+    <div class="step-item reveal">
+      <div class="step-num">01</div>
+      <div class="step-title">Site Assessment</div>
+      <p class="step-desc">We visit your property, identify all problem areas, and document moisture ingress with precision diagnostic tools.</p>
+    </div>
+    <div class="step-item reveal">
+      <div class="step-num">02</div>
+      <div class="step-title">Custom Proposal</div>
+      <p class="step-desc">A tailored specification and transparent quote delivered within 48 hours — no hidden costs, ever.</p>
+    </div>
+    <div class="step-item reveal">
+      <div class="step-num">03</div>
+      <div class="step-title">Expert Installation</div>
+      <p class="step-desc">Certified technicians execute all work with minimal disruption and rigorous quality control throughout.</p>
+    </div>
+    <div class="step-item reveal">
+      <div class="step-num">04</div>
+      <div class="step-title">Final Sign-Off</div>
+      <p class="step-desc">Comprehensive testing, full documentation handover, and your 10-year warranty certificate on completion.</p>
+    </div>
+  </div>
+</section>
+
+
+<!-- ════════════════════════════════════════════════
+     TESTIMONIALS CAROUSEL
+════════════════════════════════════════════════ -->
+<section id="testimonials">
+  <div class="testi-hd reveal">
+    <div class="eyebrow">Client Reviews</div>
+    <h2 class="section-title">What Our Clients Say</h2>
+    <p class="section-lead">Hundreds of satisfied property owners and developers across Nairobi trust Venyah.</p>
+  </div>
+
+  <div class="carousel-wrap">
+    <div class="carousel-track" id="testi-track">
+
+      <div class="testi-card">
+        <div class="testi-stars">★★★★★</div>
+        <p class="testi-body">Venyah transformed our perpetually damp basement into a fully usable, dry space. Professional, tidy, and the results have held up perfectly two full years on.</p>
+        <div class="testi-person">
+          <div class="testi-av">JM</div>
+          <div><div class="testi-name">James Mwangi</div><div class="testi-role">Homeowner, Karen</div></div>
+        </div>
+      </div>
+
+      <div class="testi-card">
+        <div class="testi-stars">★★★★★</div>
+        <p class="testi-body">Chronic roof leaks affecting three floors of our building. Venyah diagnosed it precisely and resolved the issue completely within a single week. Remarkable.</p>
+        <div class="testi-person">
+          <div class="testi-av">SK</div>
+          <div><div class="testi-name">Sarah Kamau</div><div class="testi-role">Facilities Manager, Westlands</div></div>
+        </div>
+      </div>
+
+      <div class="testi-card">
+        <div class="testi-stars">★★★★★</div>
+        <p class="testi-body">From first inspection to final sign-off — entirely smooth. The written warranty gave us real confidence this is a long-term fix, not a short-lived patch.</p>
+        <div class="testi-person">
+          <div class="testi-av">DO</div>
+          <div><div class="testi-name">David Ochieng</div><div class="testi-role">Property Developer, Karen</div></div>
+        </div>
+      </div>
+
+      <div class="testi-card">
+        <div class="testi-stars">★★★★★</div>
+        <p class="testi-body">They waterproofed all 12 bathrooms before tiling. Zero issues reported by any tenant in 18 months. Absolutely worth every shilling — highly recommended.</p>
+        <div class="testi-person">
+          <div class="testi-av">PN</div>
+          <div><div class="testi-name">Patricia Ngugi</div><div class="testi-role">Property Owner, Kileleshwa</div></div>
+        </div>
+      </div>
+
+      <div class="testi-card">
+        <div class="testi-stars">★★★★★</div>
+        <p class="testi-body">Our pool had been leaking for two years. Two other contractors failed permanently. Venyah found the exact cause and it has been bone dry ever since.</p>
+        <div class="testi-person">
+          <div class="testi-av">AO</div>
+          <div><div class="testi-name">Anthony Otieno</div><div class="testi-role">Homeowner, Runda</div></div>
+        </div>
+      </div>
+
+      <div class="testi-card">
+        <div class="testi-stars">★★★★★</div>
+        <p class="testi-body">On time, on schedule, and left the site cleaner than they found it. As an architect I'll be recommending Venyah to every client — the quality is simply excellent.</p>
+        <div class="testi-person">
+          <div class="testi-av">FM</div>
+          <div><div class="testi-name">Faith Muriithi</div><div class="testi-role">Architect, Nairobi CBD</div></div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="testi-foot">
+    <div class="carousel-dots" id="testi-dots"></div>
+    <div style="display:flex;gap:.75rem;">
+      <button class="ctrl-btn" id="tp" aria-label="Previous">&#8592;</button>
+      <button class="ctrl-btn" id="tn" aria-label="Next">&#8594;</button>
+    </div>
+  </div>
+</section>
+
+
+<!-- ════════════════════════════════════════════════
+     CTA BANNER
+════════════════════════════════════════════════ -->
+<div id="cta">
+  <div class="cta-text">
+    <h2>Ready to Waterproof Your Property?</h2>
+    <p>No-obligation site visit and written quote within 48 hours.</p>
+  </div>
+  <button class="btn-navy" style="background:var(--blue-deep);color:var(--gold);border:none;border-radius:50px;padding:1rem 2.5rem;font-family:'Outfit',sans-serif;font-size:.9rem;font-weight:700;letter-spacing:.5px;text-transform:uppercase;cursor:pointer;transition:all .3s;white-space:nowrap;position:relative;z-index:1;" onclick="goTo('#contact')" onmouseover="this.style.background='#0d3b6e'" onmouseout="this.style.background='var(--blue-deep)'">
+      Get Free Assessment ›
+    </button>
+</div>
+
+
+<!-- ════════════════════════════════════════════════
+     CONTACT
+════════════════════════════════════════════════ -->
+<section id="contact">
+  <div class="contact-grid">
+
+    <div class="reveal">
+      <div class="eyebrow">Get In Touch</div>
+      <h2 class="section-title">Request a Free<br>Site Assessment</h2>
+      <p class="section-lead">
+        Tell us about your project and we'll arrange a no-obligation site visit
+        and written quote within 48 hours.
+      </p>
+      <div class="contact-info-items">
+        <div class="c-item">
+          <div class="c-ico">📞</div>
+          <div>
+            <div class="c-lbl">Phone</div>
+            <div class="c-val">+254 702 548 896</div><!-- ← UPDATE -->
+          </div>
+        </div>
+        <div class="c-item">
+          <div class="c-ico">✉️</div>
+          <div>
+            <div class="c-lbl">Email</div>
+            <div class="c-val">info@venyahwaterproofing.co.ke</div><!-- ← UPDATE -->
+          </div>
+        </div>
+        <div class="c-item">
+          <div class="c-ico">📍</div>
+          <div>
+            <div class="c-lbl">Service Area</div>
+            <div class="c-val">Nairobi &amp; Greater Nairobi Region</div>
+          </div>
+        </div>
+        <div class="c-item">
+          <div class="c-ico">🕐</div>
+          <div>
+            <div class="c-lbl">Working Hours</div>
+            <div class="c-val">Monday – Saturday, 8:00 AM – 5:00 PM</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="reveal">
+      <div class="contact-form-wrap">
+        <div class="form-title">Send Us a Message</div>
+        <div class="form-sub">We'll respond within 24 hours.</div>
+        <form class="contact-form" id="cform" onsubmit="submitForm(event)">
+          <div class="f-row">
+            <div class="f-group"><label>First Name</label><input type="text"  placeholder="John" required /></div>
+            <div class="f-group"><label>Last Name</label> <input type="text"  placeholder="Doe" required /></div>
+          </div>
+          <div class="f-row">
+            <div class="f-group"><label>Phone</label><input type="tel"   placeholder="+254 700 000 000" required /></div>
+            <div class="f-group"><label>Email</label><input type="email" placeholder="john@example.com" required /></div>
+          </div>
+          <div class="f-group">
+            <label>Property Type</label>
+            <select>
+              <option value="">Select type…</option>
+              <option>Residential — House</option>
+              <option>Residential — Apartment</option>
+              <option>Commercial — Office</option>
+              <option>Commercial — Retail</option>
+              <option>Industrial</option>
+              <option>Mixed Use</option>
+            </select>
+          </div>
+          <div class="f-group">
+            <label>Service Required</label>
+            <select required>
+              <option value="">Select service…</option>
+              <option>Basement &amp; Foundation Waterproofing</option>
+              <option>Roofing &amp; Terrace Waterproofing</option>
+              <option>Bathroom &amp; Wet Area Waterproofing</option>
+              <option>Inspection &amp; Assessment Only</option>
+              <option>Multiple / Not Sure</option>
+            </select>
+          </div>
+          <div class="f-group">
+            <label>Project Details</label>
+            <textarea placeholder="Describe your waterproofing issue, property type and size, and any known problems…" required></textarea>
+          </div>
+          <button type="submit" class="btn-primary" style="align-self:flex-start;margin-top:.4rem;">Submit Request ›</button>
+          <div class="success-msg" id="smsg">✓ Your request has been received. We'll be in touch within 24 hours.</div>
+        </form>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ════════════════════════════════════════════════
+     FOOTER
+════════════════════════════════════════════════ -->
+<footer>
+  <div class="footer-top">
+
+    <div>
+      <div class="footer-logo-area">
+        <div class="footer-logo-mark">
+          <img src="images/logo.png" alt="Venyah Logo" /> 
+          <div class="footer-logo-mark-inner">VW</div>
+        </div>
+        <div>
+          <div class="footer-brand-name">Venyah <span>WS</span></div>
+          <div class="footer-brand-sub">Waterproofing Solutions</div>
+        </div>
+      </div>
+      <p class="footer-brand-desc">
+        Nairobi's trusted waterproofing specialists. Protecting properties
+        with certified expertise, premium systems, and a 10-year warranty.
+      </p>
+    </div>
+
+    <div class="footer-col">
+      <h4>Services</h4>
+      <ul>
+        <li><a href="#services">Basement &amp; Foundation</a></li>
+        <li><a href="#services">Roofing &amp; Terraces</a></li>
+        <li><a href="#services">Bathrooms &amp; Wet Areas</a></li>
+        <li><a href="#services">Inspection &amp; Assessment</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h4>Company</h4>
+      <ul>
+        <li><a href="#about">About Venyah</a></li>
+        <li><a href="#projects">Our Projects</a></li>
+        <li><a href="#process">Our Process</a></li>
+        <li><a href="#testimonials">Client Reviews</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h4>Contact</h4>
+      <ul>
+        <li><a href="tel:+254702548896">+254 702 548 896</a></li><!-- ← UPDATE -->
+        <li><a href="mailto:info@venyahwaterproofing.co.ke">info@venyahwaterproofing.co.ke</a></li><!-- ← UPDATE -->
+        <li><a href="#contact">Request a Quote</a></li>
+        <li><a href="#contact">Book Site Visit</a></li>
+      </ul>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    <p class="footer-copy">© 2026 Venayah Waterproofing Solutions. All rights reserved. | Nairobi, Kenya</p>
+    <div class="footer-socials">
+      <button class="social-btn" aria-label="Facebook">f</button>
+      <button class="social-btn" aria-label="Instagram">in</button>
+      <button class="social-btn" aria-label="WhatsApp">w</button>
+      <button class="social-btn" aria-label="LinkedIn">li</button>
+    </div>
+  </div>
+</footer>
+
+<script src="main.js"></script>
+</body>
+</html>
