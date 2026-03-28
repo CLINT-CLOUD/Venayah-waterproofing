@@ -120,27 +120,83 @@ const ro = new IntersectionObserver(entries => {
 document.querySelectorAll('.reveal').forEach(el => ro.observe(el));
 
 /* ═══════════════════════════════════════════════
-   CONTACT FORM
+   CONTACT FORM → WHATSAPP + EMAIL
 ═══════════════════════════════════════════════ */
+const WHATSAPP_NUMBER = '254702548896';          // Your WhatsApp number (no + or spaces)
+const RECIPIENT_EMAIL = 'info@venyahwaterproofing.co.ke'; // Your email address
+
 function submitForm(e) {
   e.preventDefault();
-  const btn = e.target.querySelector('button[type="submit"]');
-  const msg = document.getElementById('smsg');
+  const form = e.target;
+  const btn  = form.querySelector('button[type="submit"]');
+  const msg  = document.getElementById('smsg');
 
-  btn.textContent = 'Sending…';
-  btn.disabled    = true;
+  // Collect field values
+  const firstName    = form.querySelector('#f-firstname').value.trim();
+  const lastName     = form.querySelector('#f-lastname').value.trim();
+  const phone        = form.querySelector('#f-phone').value.trim();
+  const email        = form.querySelector('#f-email').value.trim();
+  const propertyType = form.querySelector('#f-property').value;
+  const service      = form.querySelector('#f-service').value;
+  const details      = form.querySelector('#f-details').value.trim();
+
+  // ── WhatsApp message ──
+  const waMessage = [
+    `*New Quote Request — Venyah Waterproofing*`,
+    ``,
+    `*Name:* ${firstName} ${lastName}`,
+    `*Phone:* ${phone}`,
+    `*Email:* ${email || 'Not provided'}`,
+    `*Property Type:* ${propertyType || 'Not specified'}`,
+    `*Service Required:* ${service || 'Not specified'}`,
+    ``,
+    `*Project Details:*`,
+    details,
+  ].join('\n');
+
+  // ── Email subject & body ──
+  const emailSubject = `Quote Request from ${firstName} ${lastName} — Venyah Waterproofing`;
+  const emailBody = [
+    `New Quote Request`,
+    ``,
+    `Name: ${firstName} ${lastName}`,
+    `Phone: ${phone}`,
+    `Email: ${email || 'Not provided'}`,
+    `Property Type: ${propertyType || 'Not specified'}`,
+    `Service Required: ${service || 'Not specified'}`,
+    ``,
+    `Project Details:`,
+    details,
+    ``,
+    `---`,
+    `Sent from the Venyah Waterproofing website contact form.`,
+  ].join('\n');
+
+  btn.innerHTML = 'Sending…';
+  btn.disabled  = true;
 
   setTimeout(() => {
+    // 1. Open WhatsApp in new tab
+    const encoded = encodeURIComponent(waMessage);
+    window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${encoded}`, '_blank');
+
+    // 2. Open email client (slight delay so browser doesn't block both popups)
+    setTimeout(() => {
+      const mailLink = `mailto:${RECIPIENT_EMAIL}?subject=${encodeURIComponent(emailSubject)}&body=${encodeURIComponent(emailBody)}`;
+      window.location.href = mailLink;
+    }, 600);
+
+    // Show success
     msg.style.display    = 'block';
-    btn.textContent      = '✓ Message Sent!';
-    btn.style.background = 'linear-gradient(135deg,#2e9e6b,#1a7a50)';
-    e.target.reset();
+    btn.innerHTML        = '✓ WhatsApp & Email opened!';
+    btn.style.background = 'linear-gradient(135deg,#25d366,#1aa050)';
+    form.reset();
 
     setTimeout(() => {
       msg.style.display    = 'none';
-      btn.textContent      = 'Submit Request →';
+      btn.innerHTML        = '<span style="margin-right:.3rem;">💬</span> Get Free Quote';
       btn.style.background = '';
       btn.disabled         = false;
-    }, 5000);
-  }, 1200);
+    }, 7000);
+  }, 800);
 }

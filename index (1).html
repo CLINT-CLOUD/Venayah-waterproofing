@@ -1,6 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <!-- =====================================================
+       HEAD — meta tags, page title, and CSS stylesheet
+       • charset: ensures special characters display correctly
+       • viewport: makes the site responsive on mobile
+       • description: shown by Google in search results
+       • styles.css: all the site's visual styling lives here
+  ===================================================== -->
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Venyah Waterproofing Solutions</title>
@@ -9,20 +16,21 @@
 </head>
 <body>
 
-<!-- ════════════════════════════════════════════════
-     NAVBAR
-     HOW TO ADD YOUR LOGO:
-     1. Create an  images /  folder next to index.html
-     2. Save your logo as  images/logo.png
-     3. In .logo-mark below, uncomment the <img> line
-        and delete the .logo-mark-inner div
-════════════════════════════════════════════════ -->
+
+<!-- =====================================================
+     NAVBAR — fixed top navigation bar
+     • Stays at the top as the user scrolls
+     • Logo on the left, links in the middle, CTA on the right
+     • On mobile (≤1100px): links hide, hamburger menu appears
+     • "Free Quote" button only appears after scrolling 60px
+     TO CHANGE YOUR LOGO:
+       1. Save your logo image as  images/logo.png
+       2. Inside .logo-mark, uncomment the <img> line
+       3. Delete the <div class="logo-mark-inner">VW</div> line
+===================================================== -->
 <nav id="navbar">
   <a href="#hero" class="nav-brand">
     <div class="logo-mark">
-      <!--  LOGO IMAGE — uncomment when ready:
-      <img src="images/logo.png" alt="Venyah Logo" />
-      -->
       <div class="logo-mark-inner">VW</div>
     </div>
     <div class="logo-text-wrap">
@@ -47,6 +55,12 @@
   </div>
 </nav>
 
+
+<!-- =====================================================
+     MOBILE MENU — slides down when hamburger is tapped
+     • Controlled by closeMob() in main.js
+     • Each link calls closeMob() so the menu closes on tap
+===================================================== -->
 <div class="mobile-menu" id="mob-menu">
   <a href="#hero"         onclick="closeMob()">Home</a>
   <a href="#projects"     onclick="closeMob()">Projects</a>
@@ -59,14 +73,19 @@
 </div>
 
 
-<!-- ════════════════════════════════════════════════
-     HERO SECTION
-     PHOTOS TO ADD:
-       images/hero-main.jpg   — large card (your best project photo)
-       images/hero-sub-1.jpg  — bottom left small card
-       images/hero-sub-2.jpg  — bottom right small card
-════════════════════════════════════════════════ -->
+<!-- =====================================================
+     HERO — full-screen landing section
+     • Deep blue gradient background with decorative rings/dots
+     • Left side: headline, description, CTA buttons, trust bar
+     • Right side: image collage (main photo + 2 sub photos)
+     • Bottom: stats bar (Projects / Experience / Satisfaction / Warranty)
+     PHOTOS TO REPLACE:
+       images/main.jpeg      → main large card
+       images/warehose.jpeg  → bottom-left small card
+       images/mbs rd.jpeg    → bottom-right small card
+===================================================== -->
 <section id="hero">
+  <!-- Decorative background rings (CSS-only, no images needed) -->
   <div class="hero-ring hero-ring-1"></div>
   <div class="hero-ring hero-ring-2"></div>
   <div class="hero-ring hero-ring-3"></div>
@@ -74,8 +93,9 @@
   <div class="hero-accent"></div>
 
   <div class="hero-body">
-    <!-- LEFT: Text -->
+    <!-- LEFT COLUMN: text content -->
     <div>
+      <!-- Animated badge at the top of the headline -->
       <div class="hero-badge">
         <div class="hero-badge-dot"></div>
         Certified Waterproofing Specialists
@@ -107,21 +127,13 @@
       </div>
     </div>
 
-    <!-- RIGHT: Image collage -->
+    <!-- RIGHT COLUMN: image collage (hidden on tablet/mobile) -->
     <div class="hero-visual">
-
-      <!-- MAIN HERO PHOTO -->
       <div class="hero-img-card">
-        
-          
-          <img src="images/main.jpeg" alt="Waterproofing project" />
-        
+        <img src="images/main.jpeg" alt="Waterproofing project" />
         <div class="photo-ph">
           <div class="photo-ph-icon">🏗️</div>
-          <div class="photo-ph-label">
-            Your main project photo<br>
-            <code>images/hero-main.jpg</code>
-          </div>
+          <div class="photo-ph-label">Your main project photo<br><code>images/hero-main.jpg</code></div>
         </div>
         <div class="hero-img-badge">
           <div class="hib-icon">🏆</div>
@@ -132,31 +144,26 @@
         </div>
       </div>
 
-      <!-- TWO SUB PHOTOS -->
       <div class="hero-sub-row">
         <div class="hero-sub-card">
-          
-            <img src="images/warehose.jpeg" alt="Waterproofing work" />
+          <img src="images/warehose.jpeg" alt="Waterproofing work" />
           <div class="photo-ph">
             <div class="photo-ph-icon">🏠</div>
             <div class="photo-ph-label"><code>images/hero-sub-1.jpg</code></div>
           </div>
         </div>
         <div class="hero-sub-card">
-          
-            <img src="images/mbs rd.jpeg" alt="Waterproofing result" />
-          
+          <img src="images/mbs rd.jpeg" alt="Waterproofing result" />
           <div class="photo-ph">
             <div class="photo-ph-icon">🏢</div>
             <div class="photo-ph-label"><code>images/hero-sub-2.jpg</code></div>
           </div>
         </div>
       </div>
-
     </div>
   </div>
 
-  <!-- Stats bar -->
+  <!-- Stats bar — edit the numbers here directly -->
   <div class="hero-stats-bar">
     <div class="hstat reveal"><div class="hstat-num">100+</div><div class="hstat-label">Projects Done</div></div>
     <div class="hstat reveal"><div class="hstat-num">5+</div> <div class="hstat-label">Years Experience</div></div>
@@ -166,19 +173,17 @@
 </section>
 
 
-<!-- ════════════════════════════════════════════════
-     PROJECTS CAROUSEL
-     PHOTOS TO ADD — create an images/ folder and add:
-       images/project-1.jpg  (Basement)
-       images/project-2.jpg  (Roof)
-       images/project-3.jpg  (Terrace)
-       images/project-4.jpg  (Pool)
-       images/project-5.jpg  (Foundation)
-       images/project-6.jpg  (Bathroom)
-
-     For each card: uncomment the <img> tag,
-     delete the .photo-ph div, done!
-════════════════════════════════════════════════ -->
+<!-- =====================================================
+     PROJECTS CAROUSEL — scrollable cards of past work
+     • Auto-plays every 5 seconds, pauses on hover
+     • Supports touch/swipe on mobile
+     • Arrow buttons: #pp (previous) and #pn (next)
+     • Dots are generated automatically by main.js
+     TO ADD A NEW PROJECT CARD:
+       1. Copy one <div class="proj-card">…</div> block
+       2. Paste it before the closing </div> of #proj-track
+       3. Update the image src, title, description, and meta tags
+===================================================== -->
 <section id="projects">
   <div class="proj-header">
     <div>
@@ -194,14 +199,10 @@
 
   <div class="carousel-wrap">
     <div class="carousel-track" id="proj-track">
-
-      <!-- PROJECT 1 -->
       <div class="proj-card">
         <div class="proj-photo">
-          <img src="images/main.jpeg" alt="Basement waterproofing Karen" /> 
-          <div class="photo-ph">
-           
-          </div>
+          <img src="images/main.jpeg" alt="Basement waterproofing Karen" />
+          <div class="photo-ph"></div>
           <span class="proj-tag">Basement</span>
         </div>
         <div class="proj-body">
@@ -211,10 +212,9 @@
         </div>
       </div>
 
-      <!-- PROJECT 2 -->
       <div class="proj-card">
         <div class="proj-photo">
-         <img src="images/flatroof.jpeg" alt="Commercial flat roof Westlands" /> 
+          <img src="images/flatroof.jpeg" alt="Commercial flat roof Westlands" />
           <div class="photo-ph">
             <div class="photo-ph-icon">🏢</div>
             <div class="photo-ph-label">Project photo<br><code>images/project-2.jpg</code></div>
@@ -228,11 +228,9 @@
         </div>
       </div>
 
-
-      <!-- PROJECT 4 -->
       <div class="proj-card">
         <div class="proj-photo">
-           <img src="images/pool.jpeg" alt="Pool waterproofing Runda" /> 
+          <img src="images/pool.jpeg" alt="Pool waterproofing Runda" />
           <div class="photo-ph">
             <div class="photo-ph-icon">🏊</div>
             <div class="photo-ph-label">Project photo<br><code>images/project-4.jpg</code></div>
@@ -246,7 +244,6 @@
         </div>
       </div>
 
-      <!-- PROJECT 5 -->
       <div class="proj-card">
         <div class="proj-photo">
           <img src="images/warehose.jpeg" alt="Industrial foundation Mombasa Road" />
@@ -263,10 +260,9 @@
         </div>
       </div>
 
-      <!-- PROJECT 6 -->
       <div class="proj-card">
         <div class="proj-photo">
-          <img src="images/bathroom.jpeg" alt="Wet room suites Kileleshwa" /> 
+          <img src="images/bathroom.jpeg" alt="Wet room suites Kileleshwa" />
           <div class="photo-ph">
             <div class="photo-ph-icon">🛁</div>
             <div class="photo-ph-label">Project photo<br><code>images/project-6.jpg</code></div>
@@ -279,16 +275,20 @@
           <div class="proj-meta"><span>Residential</span><span>2024</span><span>2 Weeks</span></div>
         </div>
       </div>
-
     </div>
   </div>
   <div class="carousel-dots" id="proj-dots"></div>
 </section>
 
 
-<!-- ════════════════════════════════════════════════
-     SERVICES
-════════════════════════════════════════════════ -->
+<!-- =====================================================
+     SERVICES — 2×2 grid of service cards
+     • Each card has a number, icon, heading, description, and list
+     • Cards animate in on scroll (.reveal class)
+     • Bottom strip has a CTA button linking to #contact
+     TO ADD OR EDIT A SERVICE:
+       Change the icon (emoji), h3 heading, <p> text, and <li> items
+===================================================== -->
 <section id="services">
   <div class="svc-head reveal">
     <div>
@@ -365,30 +365,26 @@
 </section>
 
 
-<!-- ════════════════════════════════════════════════
-     ABOUT
-     PHOTOS TO ADD:
-       images/about-tall.jpg    — tall left photo (team on site)
-       images/about-top.jpg     — top right photo
-       images/about-bottom.jpg  — bottom right photo
-════════════════════════════════════════════════ -->
+<!-- =====================================================
+     ABOUT — two-column layout: photo mosaic + text
+     • Left: 3-photo mosaic grid with a "15+ Years" badge overlay
+     • Right: heading, intro text, 4 feature rows
+     PHOTOS TO REPLACE:
+       images/pool.jpeg       → tall left cell (spans 2 rows)
+       images/completed1.jpeg → top right cell
+       images/comp2.jpeg      → bottom right cell
+===================================================== -->
 <section id="about">
   <div class="about-grid">
-
-    <!-- Photo mosaic -->
     <div class="about-mosaic reveal">
       <div class="mosaic-grid">
-
-        <!-- TALL LEFT PHOTO -->
         <div class="mosaic-cell">
-          <img src="images/pool.jpeg" alt="Venyah team on site" /> 
+          <img src="images/pool.jpeg" alt="Venyah team on site" />
           <div class="photo-ph">
             <div class="photo-ph-icon">👷</div>
             <div class="photo-ph-label">Team photo<br><code>images/about-tall.jpg</code></div>
           </div>
         </div>
-
-        <!-- TOP RIGHT PHOTO -->
         <div class="mosaic-cell">
           <img src="images/completed1.jpeg" alt="Waterproofing membrane application" />
           <div class="photo-ph">
@@ -396,24 +392,20 @@
             <div class="photo-ph-label">Work photo<br><code>images/about-top.jpg</code></div>
           </div>
         </div>
-
-        <!-- BOTTOM RIGHT PHOTO -->
         <div class="mosaic-cell">
-          <img src="images/comp2.jpeg" alt="Completed waterproofing project" /> 
+          <img src="images/comp2.jpeg" alt="Completed waterproofing project" />
           <div class="photo-ph">
             <div class="photo-ph-icon">✅</div>
             <div class="photo-ph-label">Result photo<br><code>images/about-bottom.jpg</code></div>
           </div>
         </div>
-
       </div>
       <div class="about-exp-badge">
-        <div class="big">15+</div>
+        <div class="big">5+</div>
         <div class="sm">Years of Trust</div>
       </div>
     </div>
 
-    <!-- Text content -->
     <div class="reveal">
       <div class="eyebrow">Why Choose Venyah</div>
       <h2 class="section-title">Built on Expertise.<br>Delivered with Care.</h2>
@@ -452,14 +444,16 @@
         </div>
       </div>
     </div>
-
   </div>
 </section>
 
 
-<!-- ════════════════════════════════════════════════
-     PROCESS
-════════════════════════════════════════════════ -->
+<!-- =====================================================
+     PROCESS — dark blue section, 4 steps in a row
+     • A decorative gold line connects the step circles on desktop
+     • Hovering a step circle fills it gold
+     • TO EDIT: change the step-title and step-desc text below
+===================================================== -->
 <section id="process">
   <div class="process-hd reveal">
     <div class="eyebrow">How It Works</div>
@@ -491,9 +485,14 @@
 </section>
 
 
-<!-- ════════════════════════════════════════════════
-     TESTIMONIALS CAROUSEL
-════════════════════════════════════════════════ -->
+<!-- =====================================================
+     TESTIMONIALS CAROUSEL — client review cards
+     • Same carousel engine as #projects
+     • Arrow buttons: #tp (previous) and #tn (next)
+     TO ADD A REVIEW:
+       1. Copy one <div class="testi-card">…</div> block
+       2. Update stars, quote text, initials, name, and role
+===================================================== -->
 <section id="testimonials">
   <div class="testi-hd reveal">
     <div class="eyebrow">Client Reviews</div>
@@ -503,7 +502,6 @@
 
   <div class="carousel-wrap">
     <div class="carousel-track" id="testi-track">
-
       <div class="testi-card">
         <div class="testi-stars">★★★★★</div>
         <p class="testi-body">Venyah transformed our perpetually damp basement into a fully usable, dry space. Professional, tidy, and the results have held up perfectly two full years on.</p>
@@ -557,7 +555,6 @@
           <div><div class="testi-name">Faith Muriithi</div><div class="testi-role">Architect, Nairobi CBD</div></div>
         </div>
       </div>
-
     </div>
   </div>
 
@@ -571,23 +568,36 @@
 </section>
 
 
-<!-- ════════════════════════════════════════════════
-     CTA BANNER
-════════════════════════════════════════════════ -->
+<!-- =====================================================
+     CTA BANNER — gold gradient full-width call-to-action strip
+     • Sits between Testimonials and Contact sections
+     • Button scrolls user down to #contact
+===================================================== -->
 <div id="cta">
   <div class="cta-text">
     <h2>Ready to Waterproof Your Property?</h2>
     <p>No-obligation site visit and written quote within 48 hours.</p>
   </div>
   <button class="btn-navy" style="background:var(--blue-deep);color:var(--gold);border:none;border-radius:50px;padding:1rem 2.5rem;font-family:'Outfit',sans-serif;font-size:.9rem;font-weight:700;letter-spacing:.5px;text-transform:uppercase;cursor:pointer;transition:all .3s;white-space:nowrap;position:relative;z-index:1;" onclick="goTo('#contact')" onmouseover="this.style.background='#0d3b6e'" onmouseout="this.style.background='var(--blue-deep)'">
-      Get Free Assessment ›
-    </button>
+    Get Free Assessment ›
+  </button>
 </div>
 
 
-<!-- ════════════════════════════════════════════════
-     CONTACT
-════════════════════════════════════════════════ -->
+<!-- =====================================================
+     CONTACT — two-column layout: info + form
+     • Left: contact details (phone, email, area, hours)
+     • Right: quote request form
+     HOW THE FORM WORKS (no backend needed):
+       1. User fills in the form and clicks submit
+       2. WhatsApp opens in a new tab with a pre-filled message
+       3. Email client opens 0.6s later addressed to your inbox
+       4. User just hits Send in both apps
+     TO CHANGE YOUR WHATSAPP NUMBER OR EMAIL:
+       Open main.js and update these two lines at the bottom:
+         const WHATSAPP_NUMBER = '254702548896';
+         const RECIPIENT_EMAIL = 'info@venyahwaterproofing.co.ke';
+===================================================== -->
 <section id="contact">
   <div class="contact-grid">
 
@@ -603,14 +613,14 @@
           <div class="c-ico">📞</div>
           <div>
             <div class="c-lbl">Phone</div>
-            <div class="c-val">+254 702 548 896</div><!-- ← UPDATE -->
+            <div class="c-val">+254 705 944 375</div>
           </div>
         </div>
         <div class="c-item">
           <div class="c-ico">✉️</div>
           <div>
             <div class="c-lbl">Email</div>
-            <div class="c-val">info@venyahwaterproofing.co.ke</div><!-- ← UPDATE -->
+            <div class="c-val"><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="20494e464f6056454e594148574154455250524f4f46494e470e434f0e4b45">[email&#160;protected]</a></div>
           </div>
         </div>
         <div class="c-item">
@@ -633,19 +643,19 @@
     <div class="reveal">
       <div class="contact-form-wrap">
         <div class="form-title">Send Us a Message</div>
-        <div class="form-sub">We'll respond within 24 hours.</div>
+        <div class="form-sub">We'll respond via WhatsApp within minutes.</div>
         <form class="contact-form" id="cform" onsubmit="submitForm(event)">
           <div class="f-row">
-            <div class="f-group"><label>First Name</label><input type="text"  placeholder="John" required /></div>
-            <div class="f-group"><label>Last Name</label> <input type="text"  placeholder="Doe" required /></div>
+            <div class="f-group"><label>First Name</label><input id="f-firstname" type="text"  placeholder="John" required /></div>
+            <div class="f-group"><label>Last Name</label> <input id="f-lastname"  type="text"  placeholder="Doe"  required /></div>
           </div>
           <div class="f-row">
-            <div class="f-group"><label>Phone</label><input type="tel"   placeholder="+254 700 000 000" required /></div>
-            <div class="f-group"><label>Email</label><input type="email" placeholder="john@example.com" required /></div>
+            <div class="f-group"><label>Phone</label><input id="f-phone" type="tel"   placeholder="+254 700 000 000" required /></div>
+            <div class="f-group"><label>Email</label><input id="f-email" type="email" placeholder="john@example.com" /></div>
           </div>
           <div class="f-group">
             <label>Property Type</label>
-            <select>
+            <select id="f-property">
               <option value="">Select type…</option>
               <option>Residential — House</option>
               <option>Residential — Apartment</option>
@@ -657,7 +667,7 @@
           </div>
           <div class="f-group">
             <label>Service Required</label>
-            <select required>
+            <select id="f-service" required>
               <option value="">Select service…</option>
               <option>Basement &amp; Foundation Waterproofing</option>
               <option>Roofing &amp; Terrace Waterproofing</option>
@@ -668,10 +678,12 @@
           </div>
           <div class="f-group">
             <label>Project Details</label>
-            <textarea placeholder="Describe your waterproofing issue, property type and size, and any known problems…" required></textarea>
+            <textarea id="f-details" placeholder="Describe your waterproofing issue, property type and size, and any known problems…" required></textarea>
           </div>
-          <button type="submit" class="btn-primary" style="align-self:flex-start;margin-top:.4rem;">Submit Request ›</button>
-          <div class="success-msg" id="smsg">✓ Your request has been received. We'll be in touch within 24 hours.</div>
+          <button type="submit" class="btn-primary" style="align-self:flex-start;margin-top:.4rem;">
+            <span style="margin-right:.3rem;">💬</span> Get Free Quote
+          </button>
+          <div class="success-msg" id="smsg">✓ WhatsApp &amp; your email client are opening — your enquiry is on its way!</div>
         </form>
       </div>
     </div>
@@ -680,16 +692,22 @@
 </section>
 
 
-<!-- ════════════════════════════════════════════════
-     FOOTER
-════════════════════════════════════════════════ -->
+<!-- =====================================================
+     FOOTER — dark blue, 4-column grid
+     • Col 1: logo, brand description
+     • Col 2: Services links
+     • Col 3: Company links
+     • Col 4: Contact links
+     • Bottom bar: copyright + social icon buttons
+     TO LINK SOCIAL BUTTONS: add onclick="window.open('URL','_blank')"
+     to each .social-btn button (WhatsApp button already linked)
+===================================================== -->
 <footer>
   <div class="footer-top">
-
     <div>
       <div class="footer-logo-area">
         <div class="footer-logo-mark">
-          <img src="images/logo.png" alt="Venyah Logo" /> 
+          <img src="images/logo.png" alt="Venyah Logo" />
           <div class="footer-logo-mark-inner">VW</div>
         </div>
         <div>
@@ -726,26 +744,28 @@
     <div class="footer-col">
       <h4>Contact</h4>
       <ul>
-        <li><a href="tel:+254702548896">+254 702 548 896</a></li><!-- ← UPDATE -->
-        <li><a href="mailto:info@venyahwaterproofing.co.ke">info@venyahwaterproofing.co.ke</a></li><!-- ← UPDATE -->
+        <li><a href="tel:+254705944375">+254 705 944 375</a></li>
+        <li><a href="/cdn-cgi/l/email-protection#f0999e969fb086959e899198879184958280829f9f96999e97de939fde9b95"><span class="__cf_email__" data-cfemail="3950575f56794f5c574058514e584d5c4b494b56565f50575e175a5617525c">[email&#160;protected]</span></a></li>
         <li><a href="#contact">Request a Quote</a></li>
         <li><a href="#contact">Book Site Visit</a></li>
       </ul>
     </div>
-
   </div>
 
   <div class="footer-bottom">
     <p class="footer-copy">© 2026 Venayah Waterproofing Solutions. All rights reserved. | Nairobi, Kenya</p>
     <div class="footer-socials">
       <button class="social-btn" aria-label="Facebook">f</button>
+      
       <button class="social-btn" aria-label="Instagram">in</button>
-      <button class="social-btn" aria-label="WhatsApp">w</button>
+      <button class="social-btn" aria-label="WhatsApp" onclick="window.open('https://wa.me/254705944375','_blank')">w</button>
       <button class="social-btn" aria-label="LinkedIn">li</button>
     </div>
   </div>
 </footer>
 
+<!-- main.js: navbar scroll, hamburger, carousels, reveal animations,
+     and the submitForm() function that sends to WhatsApp + email -->
 <script src="main.js"></script>
 </body>
 </html>
